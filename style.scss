@@ -1,0 +1,23 @@
+html {
+  counter-reset: count;
+}
+
+.duck-check {
+  position: absolute;
+  visibility: hidden;
+  left: -9999px;
+
+  &:checked {
+    counter-increment: count;
+  }
+}
+
+.count-info::before {
+  content: counter(count);
+}
+
+.duck {
+  &__img {
+    width: 60px;
+  }
+}
