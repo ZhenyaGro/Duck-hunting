@@ -24,10 +24,6 @@
   &:checked~label {
     display: none;
   }
-
-  // &:checked~label .duck__img {
-  //   transform: translateY(500px);
-  // }
 }
 
 .counter-info {
@@ -50,10 +46,4 @@
   &__img {
     width: $duckWidth;
   }
-
-  // @for $i from 1 through $countDuck {
-  //   &_#{$i} {
-  //     animation: duck-fly-#{$i} 5s ease-in #{$i}s both;
-  //   }
-  // }
 }
