@@ -28,6 +28,7 @@ $countDuck: 3;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
 }
 
 .duck-check {
@@ -53,7 +54,6 @@ $countDuck: 3;
     content: counter(count);
   }
 }
-
 
 .duck {
   position: absolute;
