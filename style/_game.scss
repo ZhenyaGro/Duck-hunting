@@ -1,24 +1,3 @@
-$duckWidth: 80px;
-$countDuck: 12;
-
-@for $i from 1 through $countDuck {
-  @keyframes duck-fly-#{$i} {
-    0% {
-      top: random(80) + vh;
-    }
-
-    50% {
-      left: random(60) + vw;
-      top: random(80) + vh;
-    }
-
-    100% {
-      left: 100vw;
-      top: random(80) + vh;
-    }
-  }
-}
-
 .body {
   counter-reset: count;
   height: 100vh;
@@ -29,12 +8,13 @@ $countDuck: 12;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 .duck-check {
-  position: absolute;
-  visibility: hidden;
-  left: -9999px;
+  @extend %hide;
 
   &:checked {
     counter-increment: count;
@@ -51,7 +31,7 @@ $countDuck: 12;
   right: 24px;
 
   &::before {
-    content: counter(count);
+    content: counter(count) " / #{$countDuck}";
   }
 }
 
@@ -63,10 +43,9 @@ $countDuck: 12;
     width: $duckWidth;
   }
 
-  @for $i from 1 through $countDuck {
-    &_#{$i} {
-      animation: duck-fly-#{$i} 5s ease-in #{$i}s both;
-    }
-  }
-
+  // @for $i from 1 through $countDuck {
+  //   &_#{$i} {
+  //     animation: duck-fly-#{$i} 5s ease-in #{$i}s both;
+  //   }
+  // }
 }

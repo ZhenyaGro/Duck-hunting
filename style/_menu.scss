@@ -1,0 +1,30 @@
+.start-checkbox {
+  @extend %hide;
+}
+
+.menu {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -45%);
+}
+
+#gameStart:checked~.game .duck {
+  @for $i from 1 through $countDuck {
+    &_#{$i} {
+      animation: duck-fly-#{$i} 5s ease-in #{$i}s both;
+    }
+  }
+}
+
+#gameStart:checked~.menu>.menu__start:before {
+  -webkit-animation: progress-bar 1.2s;
+  animation: progress-bar 1.2s;
+}
+
+#gameStart:checked~.menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.2s linear 0.5s, opacity 0.3s linear;
+  transition-delay: 1s;
+}

@@ -1,0 +1,8 @@
+$duckWidth: 80px;
+$countDuck: 12;
+
+%hide {
+  position: absolute;
+  visibility: hidden;
+  left: -9999px;
+}

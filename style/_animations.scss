@@ -1,0 +1,17 @@
+@for $i from 1 through $countDuck {
+  @keyframes duck-fly-#{$i} {
+    0% {
+      top: random(80) + vh;
+    }
+
+    50% {
+      left: random(60) + vw;
+      top: random(80) + vh;
+    }
+
+    100% {
+      left: 100vw;
+      top: random(80) + vh;
+    }
+  }
+}
