@@ -23,12 +23,19 @@
   &:checked~label {
     display: none;
   }
+
+  // &:checked~label .duck__img {
+  //   transform: translateY(500px);
+  // }
 }
 
 .counter-info {
   position: absolute;
-  top: 14px;
-  right: 24px;
+  top: 1rem;
+  right: 2rem;
+  border: 2px solid;
+  border-radius: 999px;
+  padding: 1.2rem 2rem;
 
   &::before {
     content: counter(count) " / #{$countDuck}";

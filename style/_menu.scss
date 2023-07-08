@@ -7,6 +7,73 @@
   left: 50%;
   top: 45%;
   transform: translate(-50%, -45%);
+
+  &__start,
+  &__start *,
+  &__start:after,
+  &__start:before,
+  &__start:after,
+  &__start:before {
+    border: 0 solid;
+    box-sizing: border-box;
+  }
+
+  &__start {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: #000;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 100%;
+    font-weight: 900;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+  }
+
+  &__start:disabled {
+    cursor: default;
+  }
+
+  &__start:-moz-focusring {
+    outline: auto;
+  }
+
+  &__start svg {
+    display: block;
+    vertical-align: middle;
+  }
+
+  &__start [hidden] {
+    display: none;
+  }
+
+  &__start {
+    border: 2px solid;
+    border-radius: 999px;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    padding: 1.2rem 3rem;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &__start span {
+    font-weight: 900;
+    mix-blend-mode: difference;
+  }
+
+  &__start:before {
+    background: #fff;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
 }
 
 #gameStart:checked~.game .duck {
