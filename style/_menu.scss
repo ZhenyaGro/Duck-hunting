@@ -60,6 +60,7 @@
     padding: 1.2rem 3rem;
     position: relative;
     text-transform: uppercase;
+    text-align: center;
   }
 
   &__start span {
@@ -104,4 +105,14 @@
   visibility: hidden;
   transition: visibility 0.2s linear 0.5s, opacity 0.3s linear;
   transition-delay: 1s;
+}
+
+@media (max-width: 490px) {
+  #gameStart:checked~.game .duck {
+    @for $i from 1 through $countDuck {
+      &_#{$i} {
+        animation: duck-fly-#{$i} 3s ease-in #{0.8 * $i}s both;
+      }
+    }
+  }
 }
