@@ -1,5 +1,53 @@
-html {
+@keyframes duck-fly-1 {
+  0% {
+    left: -60px;
+    top: 64vh;
+  }
+  50% {
+    left: 59vw;
+    top: 75vh;
+  }
+  100% {
+    left: 100vw;
+    top: 19vh;
+  }
+}
+@keyframes duck-fly-2 {
+  0% {
+    left: -60px;
+    top: 6vh;
+  }
+  50% {
+    left: 3vw;
+    top: 77vh;
+  }
+  100% {
+    left: 100vw;
+    top: 65vh;
+  }
+}
+@keyframes duck-fly-3 {
+  0% {
+    left: -60px;
+    top: 32vh;
+  }
+  50% {
+    left: 20vw;
+    top: 10vh;
+  }
+  100% {
+    left: 100vw;
+    top: 71vh;
+  }
+}
+.body {
   counter-reset: count;
+  height: 100vh;
+  margin: 0;
+  background-image: url(https://i.ytimg.com/vi/i9R8MqilMW8/maxresdefault.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .duck-check {
@@ -11,10 +59,27 @@ html {
   counter-increment: count;
 }
 
-.count-info::before {
+.counter-info {
+  position: absolute;
+  top: 14px;
+  right: 24px;
+}
+.counter-info::before {
   content: counter(count);
 }
 
+.duck {
+  position: absolute;
+}
 .duck__img {
   width: 60px;
+}
+.duck_1 {
+  animation: duck-fly-1 5s ease-in 1s both;
+}
+.duck_2 {
+  animation: duck-fly-2 5s ease-in 2s both;
+}
+.duck_3 {
+  animation: duck-fly-3 5s ease-in 3s both;
 }/*# sourceMappingURL=style.css.map */
