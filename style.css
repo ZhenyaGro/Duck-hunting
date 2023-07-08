@@ -1,43 +1,40 @@
 @keyframes duck-fly-1 {
   0% {
-    left: -60px;
-    top: 64vh;
+    top: 27vh;
   }
   50% {
-    left: 59vw;
-    top: 75vh;
+    left: 32vw;
+    top: 17vh;
   }
   100% {
     left: 100vw;
-    top: 19vh;
+    top: 79vh;
   }
 }
 @keyframes duck-fly-2 {
   0% {
-    left: -60px;
-    top: 6vh;
+    top: 60vh;
   }
   50% {
-    left: 3vw;
-    top: 77vh;
+    left: 15vw;
+    top: 51vh;
   }
   100% {
     left: 100vw;
-    top: 65vh;
+    top: 79vh;
   }
 }
 @keyframes duck-fly-3 {
   0% {
-    left: -60px;
-    top: 32vh;
+    top: 77vh;
   }
   50% {
-    left: 20vw;
-    top: 10vh;
+    left: 1vw;
+    top: 80vh;
   }
   100% {
     left: 100vw;
-    top: 71vh;
+    top: 40vh;
   }
 }
 .body {
@@ -48,6 +45,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .duck-check {
@@ -57,6 +55,9 @@
 }
 .duck-check:checked {
   counter-increment: count;
+}
+.duck-check:checked ~ label {
+  display: none;
 }
 
 .counter-info {
@@ -70,9 +71,10 @@
 
 .duck {
   position: absolute;
+  left: -80px;
 }
 .duck__img {
-  width: 60px;
+  width: 80px;
 }
 .duck_1 {
   animation: duck-fly-1 5s ease-in 1s both;

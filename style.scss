@@ -1,21 +1,20 @@
-$duckWidth: 60px;
+$duckWidth: 80px;
 $countDuck: 3;
 
 @for $i from 1 through $countDuck {
   @keyframes duck-fly-#{$i} {
     0% {
-      left: -$duckWidth;
-      top: random(80)+vh;
+      top: random(80) + vh;
     }
 
     50% {
-      left: random(60)+vw;
-      top: random(80)+vh;
+      left: random(60) + vw;
+      top: random(80) + vh;
     }
 
     100% {
       left: 100vw;
-      top: random(80)+vh;
+      top: random(80) + vh;
     }
   }
 }
@@ -28,6 +27,7 @@ $countDuck: 3;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .duck-check {
@@ -37,6 +37,10 @@ $countDuck: 3;
 
   &:checked {
     counter-increment: count;
+  }
+
+  &:checked~label {
+    display: none;
   }
 }
 
@@ -53,6 +57,7 @@ $countDuck: 3;
 
 .duck {
   position: absolute;
+  left: -$duckWidth;
 
   &__img {
     width: $duckWidth;
